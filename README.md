@@ -43,3 +43,21 @@ alias python="/usr/local/bin/python3.10"
 14) `source ~/.bashrc` - to activate or refresh the bashrc
 
 15) Type `python` again to confirm - voila!
+
+
+
+16) Create a virtual environment - `python -m venv ~/.venv`
+
+17) Go back to bashrc file - `nano ~/.bashrc`
+
+18) Add the below to the file 
+
+--------------------------------
+
+# source venv
+
+source ~/.venv/bin/activate
+
+--------------------------------
+
+19) Run step 14 again - voila! - Always in your virtual environment with your newly installed python
