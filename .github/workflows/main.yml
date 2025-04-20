@@ -10,11 +10,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
 
-      - name: Check Python 3.10 build exists
+      - name: Install dependencies
         run: |
-          /usr/local/bin/python3.10 --version
-
-      - name: Install dependencies with Python 3.10
-        run: |
-          /usr/local/bin/python3.10 -m pip install --upgrade pip
-          /usr/local/bin/python3.10 -m pip install -r requirements.txt
+          source ~/.bashrc
+          make install
