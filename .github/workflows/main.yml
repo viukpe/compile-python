@@ -8,9 +8,13 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3      # use the current checkout action
+
+      - name: Set up Python 3.10
+        uses: actions/setup-python@v5   # v5 correctly resolves “3.10”
+        with:
+          python-version: '3.10'        # latest 3.10.x
 
       - name: Install dependencies
         run: |
-          source ~/.bashrc
           make install
